@@ -3,18 +3,18 @@ import { tblHeader } from "../data/tableData";
 
 const DataTable = (props) => {
   return (
-    <div className="bg-yellow-100 " >
-      <table  className="w-[800px]">
+    <div className="bg-white w-[90%]" >
+      <table  className="w-[100%] table">
         <thead>
-          <tr className="bg-neutral-200 h-[45px]">
+          <tr className="bg-neutral-200 h-[45px] text-left ">
             {tblHeader.map((item) => (
-              <th className={`${item.class}`} key={Math.random()}>
+              <th className={`p-4`} key={Math.random()}>
                 {item.value}
               </th>
             ))}
           </tr>
         </thead>
-        <tbody>{props.children}</tbody>
+        <tbody >{props.children}</tbody>
       </table>
     </div>
   );

@@ -6,5 +6,12 @@ module.exports = {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant('child', '& > *');
+      addVariant('child-hover', '& > *:hover');
+      addVariant('child-input', '& > input');
+      addVariant('child-label', '& > label');
+  }
+  ],
 }
